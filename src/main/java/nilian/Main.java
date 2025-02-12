@@ -1,8 +1,7 @@
 package nilian;
 
-import nilian.component.Unit.Unit;
-
-import java.util.Properties;
+import nilian.simulator.api.Unit.Unit;
+import nilian.simulator.api.Unit.properties.CyclePolicy;
 
 public class Main {
 
@@ -10,7 +9,7 @@ public class Main {
 
         // making a unit
         Unit unit = Unit.newBuilder()
-                .setProperties(new Properties())
+                .setCyclePolicy(CyclePolicy.DIE_WITH_SOURCE)
                 .build();
 
 
